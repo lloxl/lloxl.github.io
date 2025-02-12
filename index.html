@@ -1,12 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3r7ib4c1ob"></script>
 </head>
+
 <body>
-  <p>Hello, World!</p>
+    <div id="app">
+        <div class="mcard_view">
+            <div class="inner">
+                <div class="mcard_intro">
+                    <div class="mcard_title">
+                        <div class="dates">
+                            <span data-date class="d">
+                                <span>2025</span>
+                            </span>
+                            <span data-date class="d">
+                                <span>11</span>
+                            </span>
+                            <span data-date_none>
+                                <span>10</span>
+                            </span>
+                        </div>
+                        <div class="day_of_the_week">
+                            wedding day
+                        </div>
+                    </div>
+                    <div>
+                        <img src="7ccb85b344e6023cdd7a9112735c8faa.jpg" width="430" height="100%" alt="메인 웨딩 사진" class="intro-blend-image">
+                    </div>
+                    <div class="bottom_info">
+                        <div class="name">
+                            <div class="groom">차은우</div>
+                            <div class="and">&#x2764;</div>
+                            <div class="bride">신혜지</div>
+                        </div>
+                        <div class="date_place">
+                            <div class="info">
+                                2025년 11월 09일 일요일 오후 1시 10분
+                                <br>
+                                혜원 웨딩컨벤션 20F 시네원홀
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invitation-wrap">
+
+                    <div class="invi_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="title"> 초대합니다 </div>
+                    </div>
+
+                    <div class="text fade-in center" style="opacity: 1; transform: translate(0px, 0px);">
+                        서로의 마음에 작은 빛이 되어 <br>
+                        같은 곳을 바라보며 걸어온 저희 두 사람이 <br>
+                        이제 하나의 길을 함께 가고자 합니다. <br>
+                        <br>
+                        기쁠 때나 힘들 때나 <br>
+                        서로를 의지하며 사랑과 신뢰로 <br>
+                        소중한 하루하루를 쌓아가겠습니다. <br>
+                        <br>
+                        저희의 새로운 시작을 따뜻한 축복으로 빛내 주시면 <br>
+                        더없이 큰 기쁨이 될 것입니다. <br>
+                        부디 오셔서 함께해 주세요.
+                    </div>
+
+                    <div class="parents-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="groom">
+                            <span>
+                                <span class="groom-p">
+                                    차길동
+                                    <span> · </span>
+                                </span>
+                                <span class="groom-p">
+                                    홍길동
+                                </span>
+                            </span>
+
+                            <span class="relation">
+                                <span>의</span>
+                                <span>아들</span>
+                            </span>
+
+                            <span groom class="name">은우</span>
+                        </div>
+                        <div class="bride">
+                            <span>
+                                <span class="bride-p">
+                                    신연규
+                                    <span> · </span>
+                                </span>
+                                <span class="bride-p">
+                                    윤용인
+                                </span>
+                            </span>
+
+                            <span class="relation">
+                                <span>의</span>
+                                <span>딸</span>
+                            </span>
+
+                            <span bride class="name">혜지</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="contact-button">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+
+
+
+                            연락하기
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+
+                    <div class="calendar-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="calenar-inner">
+                            <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                <div class="date" style="margin-bottom: 0px;">
+                                    <div> 2025.11.09</div>
+                                </div>
+                                <div class="hours"> 일요일 오후 1시 10분 </div>
+                            </div>
+
+                            <div class="c-cakebdar fade-in" style="opacity: 1; transform: translate(0px; 0px;);">
+
+                                <table cellspacing="0" class="c-calendar-table fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                    <thead>
+                                        <tr>
+                                            <th>일</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">1</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <span class="">2</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">3</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">4</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">5</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">6</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">7</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">8</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <div class="c-calendar-wedding_day">
+                                                    <div class="">09</div>
+                                                </div>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">10</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">11</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">12</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">13</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">14</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">15</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <span class="">16</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">17</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">18</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">19</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">20</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">21</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">22</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <span class="">23</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">24</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">25</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">26</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">27</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">28</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class="">29</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <td style="position: relative">
+                                                <span class="">30</span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                            <td style="position: relative">
+                                                <span class=""></span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+
+                                </table>
+
+                            </div>
+
+
+                            <div class="gallery-wrap">
+                                <div class="gal_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                    <div class="title">갤러리</div>
+                                </div>
+
+                                <div class="gallery_container fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                    <div>
+                                        <div class="gallery-grid-container">
+                                            <div class="gallery-grid grid3" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(10, auto)">
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+                                                <div class="grid-item">
+                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="map-wrap">
+                                <div class="m-title fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                    <div class="title"> 오시는 길 </div>
+                                    <div class="location-wrap">
+                                        <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                            <div> 시네원 웨딩홀 5F 시네원홀 </div>
+                                        </div>
+                                        <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                            <div> 서울 동작구 혜원대로 10길 10 </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="map-wrap" style="opacity: 1; transform: translate(0px 0px);">
+                                        <div id="map" tabindex="0" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"> </div>
+
+                                        <script>
+                                            var map = new naver.maps.Map('map', {
+                                                center: new naver.maps.LatLng(37.561465, 126.973110),
+                                                zoom: 17
+                                            });
+
+                                            var marker = new naver.maps.Marker({
+                                                position: new naver.maps.LatLng(37.561465, 126.973110),
+                                                map: map
+                                            });
+
+                                        </script>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

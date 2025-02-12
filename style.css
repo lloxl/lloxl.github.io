@@ -1,0 +1,362 @@
+@font-face {
+    font-family: 'Cafe24Lovingu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#app,
+html {
+    height: 100%;
+    text-align: center;
+    font-family: 'MaruBuriSemiBold';
+}
+
+.mcard_view {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 0;
+    margin: auto;
+    color: var(--text-color);
+    background: var(--primary-bg-color);
+    background-image: var(--primary-bg-image);
+    -ms-overflow-style: none;
+    line-height: 2rem;
+    font-family: var(--font-regular), serif;
+    letter-spacing: var(--font-regular-spacing);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .04);
+}
+
+.mcard_intro {
+    position: relative;
+    padding: 0 0 40px;
+    --intro-text-color: #49413a;
+    --intro-text-light-color: #595959;
+}
+
+.mcard_intro .mcard_title .dates > span[data-date] {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    border: none;
+    font-size: 30px;
+    padding: 0px 4px;
+    font-family: 'MaruBuriSemiBold';
+}
+
+.mcard_intro .dates .d:after {
+    content: "/";
+    font-size: 20px;
+    vertical-align: top;
+    margin: auto;
+    padding: auto;
+}
+
+.mcard_intro .mcard_title .dates > span[data-date_none] {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    border: none;
+    font-size: 30px;
+    padding: 0px 4px;
+    font-family: 'MaruBuri';
+}
+
+.mcard_title {
+    padding: 50px 0 30px;
+    color: #19181d;
+    font-family: ;
+    line-height: 25px;
+    border-color: #000;
+}
+
+.dates {
+    text-align: center;
+}
+
+.day_of_the_week {
+    padding: 10px 0 20px;
+    color: var(--intro-text-color);
+    font-family: Crimson Pro, var(--font-regular);
+    line-height: 21px;
+    text-align: center;
+}
+
+.photo {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 0;
+    z-index: 0;
+    min-height: 80px;
+    box-shadow: inset 0 0 0 1px;
+}
+
+.bottom_info {
+    margin-top: 30px;
+}
+
+.mcard_intro .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    letter-spacing: 4px;
+    color: #19181d;
+    font-size: 1.5rem;
+    font-family: 'MaruBuriSemiBold';
+}
+
+.mcard_intro .name > div .groom {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mcard_intro .name > div.and {
+    position: relative;
+    display: inline-block;
+    content: "";
+    opacity: .85;
+    color: #ff9191;
+}
+
+.mcard_intro .name > div .bride {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mcard_intro .date_place {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #19181d;
+    font-family: 'MaruBuri';
+}
+
+.fade-in {
+    transition: all .8s ease-out;
+    box-sizing: border-box;
+}
+
+.invitation-wrap {
+    margin: 1px 0;
+    padding: 40px 0;
+}
+
+.invi_title {
+    color: #89757a;
+    letter-spacing: .5px;
+    font-size: 1.5rem;
+    font-family: 'MaruBuriSemiBold';
+
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.invitation-wrap .text {
+    display: inline-block;
+    margin: 30px 10px 30px 10px;
+    font-size: 1rem;
+    font-family: 'MaruBuri';
+}
+
+.parents-wrap {
+    padding: 1.2rem 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.parents-wrap .bride-p {
+    font-size: 1.2rem;
+    color: #19181d;
+}
+
+.parents-wrap .bride > span[bride] {
+    font-size: 1.2rem;
+    color: aqua;
+}
+
+.parents-wrap .groom-p {
+    font-size: 1.2rem;
+    color: #19181d;
+}
+
+.parents-wrap .groom > span[groom] {
+    font-size: 1.2rem;
+    color: aqua;
+}
+
+
+
+.parents-wrap .relation {
+    font-size: .8rem;
+    color: #6a7686;
+}
+
+.contact-wrap {}
+
+.contact-button {
+    margin: 0 auto;
+    max-width: 220px;
+    color: #ff9191;
+    border: 1px solid #ff9191;
+    border-radius: 32px;
+    text-align: center;
+    font-size: .9rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.button-icon {}
+
+.calendar-wrap {
+    padding: 30px 0;
+}
+
+.calenar-inner {
+    padding: 3.6rem 0 3.8rem;
+    border-left: 0;
+    border-right: 0;
+    background: var(--secondary-bg-color);
+    background-image: var(--primary-bg-image);
+}
+
+.calendar-wrap .date {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 3px;
+    color: var(--text-dark-color);
+    opacity: .8;
+    font-family: Crimson Pro;
+}
+
+.calendar-wrap .hours {
+    margin-bottom: 1.25rem;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: var(--text-dark-color);
+}
+
+.c-calendar {
+    padding: 0 var(--calendar-margin-lr);
+    margin: 0 36px;
+    border: 1px solid var(--border-color);
+    border-left: 0;
+    border-right: 0;
+}
+
+#app .c-calendar-table {
+    line-height: 1.8rem;
+}
+
+.c-calendar-table {
+    margin: auto;
+    width: 100%;
+    font-size: .875rem;
+    line-height: 2.375rem;
+}
+
+.c-calendar-table {
+    padding: 1.5rem 0;
+}
+
+.c-calendar-table > tbody tr td:first-child,
+.c-calendar-table > thead tr th:first-child {
+    color: #c6472b !important;
+}
+
+.c-calendar-wedding_day {
+    color: #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.c-calendar-wedding_day > div {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+}
+
+.c-calendar-wedding_day > div {
+    background: #ff9191;
+}
+
+.gallery-wrap {
+    margin: 1px 0;
+    padding: 50px 0;
+}
+
+.gallery-container {
+    margin: 40px 0 0;
+}
+
+.gallery-grid-container {
+    overflow: hidden;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 16px;
+
+}
+
+.grid-item {
+    grid-row-start: span2;
+    grid-column-start: 1;
+    grid-row-end: auto;
+    grid-column-end: 2;
+}
+
+.gallery-grid .item {
+    background-color: #eee;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-style: solid;
+    border-color : #fbfbfb;
+    -webkit-box-sizing : border-box;
+    cursor: pointer;
+}
+
+.map-wrap {
+    margin: 1px 0;
+    padding: 40px 0;
+}
+
+.location-wrap {
+    margin: 18px 0 26px;
+}
+
+.location-hall {
+   color: #000; 
+}
+
+.location-address {
+    font-size: .95rem;
+    color: #797979;
+}
+
+.map-wrap {
+    margin: 18px 0 26px;
+}
