@@ -367,10 +367,20 @@
                                         <script>
                                             var mapOptions = {
                                                 center: new naver.maps.LatLng(37.561460, 126.973062),
-                                                zoom: 10
+                                                zoom: 20,
+                                                minZoom: 10,
+                                                zoomControl: true,
+                                                zoomControlOption: {
+                                                    position: naver.maps.Position.TOP_RIGHT
+                                                }
                                             };
 
                                             var map = new naver.maps.Map('map', mapOptions);
+                                            var marker = new naver.maps.Marker({
+                                                position: new naver.maps.LatLng(37.561460, 126.973062),
+                                                map: map
+                                            })
+
                                         </script>
 
 
@@ -386,4 +396,6 @@
             </div>
         </div>
     </div>
-</body></html>
+</body>
+
+</html>
