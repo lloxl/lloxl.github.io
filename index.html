@@ -362,18 +362,15 @@
                                     </div>
 
                                     <div class="map-wrap" style="opacity: 1; transform: translate(0px 0px);">
-                                        <div id="map" tabindex="0" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"> </div>
+                                        <div id="map" style="width:100%;height:400px;"></div>
 
                                         <script>
-                                            var map = new naver.maps.Map('map', {
-                                                center: new naver.maps.LatLng(37.561465, 126.973110),
-                                                zoom: 17
-                                            });
+                                            var mapOptions = {
+                                                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                                                zoom: 10
+                                            };
 
-                                            var marker = new naver.maps.Marker({
-                                                position: new naver.maps.LatLng(37.561465, 126.973110),
-                                                map: map
-                                            });
+                                            var map = new naver.maps.Map('map', mapOptions);
 
                                         </script>
 
