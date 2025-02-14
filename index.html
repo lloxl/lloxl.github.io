@@ -13,12 +13,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3r7ib4c1ob"></script>
+    <script src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+
+
+
 </head>
 
 <body>
+
     <div id="app">
         <div class="mcard_view">
-            <div class="inner">
+            <div class="card_inner">
                 <div class="mcard_intro">
                     <div class="mcard_title">
                         <div class="dates">
@@ -37,7 +43,7 @@
                         </div>
                     </div>
                     <div>
-                        <img src="7ccb85b344e6023cdd7a9112735c8faa.jpg" width="430" height="100%" alt="메인 웨딩 사진" class="intro-blend-image">
+                        <img src="7ccb85b344e6023cdd7a9112735c8faa.jpg" width="100%" height="100%" alt="메인 웨딩 사진" class="intro-blend-image">
                     </div>
                     <div class="bottom_info">
                         <div class="name">
@@ -141,7 +147,7 @@
                                 <div class="hours"> 일요일 오후 1시 10분 </div>
                             </div>
 
-                            <div class="c-cakebdar fade-in" style="opacity: 1; transform: translate(0px; 0px;);">
+                            <div class="c-calendar fade-in" style="opacity: 1; transform: translate(0px; 0px;);">
 
                                 <table cellspacing="0" class="c-calendar-table fade-in" style="opacity: 1; transform: translate(0px, 0px);">
                                     <thead>
@@ -352,38 +358,581 @@
                             <div class="map-wrap">
                                 <div class="m-title fade-in" style="opacity: 1; transform: translate(0px 0px);">
                                     <div class="title"> 오시는 길 </div>
-                                    <div class="location-wrap">
-                                        <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
-                                            <div> 시네원 웨딩홀 5F 시네원홀 </div>
+
+                                    <div>
+                                        <div class="location-wrap">
+                                            <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                                <div> 시네원 웨딩홀 5F 시네원홀 </div>
+                                            </div>
+                                            <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                                <div> 서울 동작구 혜원대로 10길 10 </div>
+                                            </div>
                                         </div>
-                                        <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
-                                            <div> 서울 동작구 혜원대로 10길 10 </div>
+
+                                        <div class="map-inner fade-in" style="opacity: 1; transform: translate(0px 0px);">
+
+                                            <div>
+                                                <div id="map" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"></div>
+
+                                                <script>
+                                                    var mapOptions = {
+                                                        center: new naver.maps.LatLng(37.651013, 126.787226),
+                                                        zoom: 17.4,
+                                                        minZoom: 10
+                                                    };
+
+                                                    var map = new naver.maps.Map('map', mapOptions);
+                                                    var marker = new naver.maps.Marker({
+                                                        position: new naver.maps.LatLng(37.651013, 126.787226),
+                                                        map: map
+                                                    })
+                                                </script>
+                                            </div>
+
+                                            <div>
+                                                <div class="map-navi gothic">
+                                                    <div class="navi">
+                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_navermap_w48.png">
+                                                        <span>네이버 지도</span>
+                                                    </div>
+                                                    <div class="navi">
+                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_kakaonavi_w48.png">
+                                                        <span>카카오 내비</span>
+                                                    </div>
+                                                    <div class="navi_none">
+                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_tmap_w48.png">
+                                                        <span>티맵</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="map-wrap" style="opacity: 1; transform: translate(0px 0px);">
-                                        <div id="map" style="width:100%;height:400px;"></div>
+                                    <div>
+                                        <div class="waytocome-wrap">
+                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                <div class="wayicon">
+                                                    <div class="icon-back">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
+                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
+                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="wayhow">
+                                                    <div class="title">
+                                                        <span>지하철</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div>
+                                                            (1호선 · 2호선) 시청역 9번 출구 → 도보 4분
+                                                            <br>
+                                                            (1호선 · 4호선) 서울역 3번 출구 → 도보 7분
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                        <script>
-                                            var mapOptions = {
-                                                center: new naver.maps.LatLng(37.561460, 126.973062),
-                                                zoom: 20,
-                                                minZoom: 10,
-                                                zoomControl: true,
-                                                zoomControlOption: {
-                                                    position: naver.maps.Position.TOP_RIGHT
-                                                }
-                                            };
-
-                                            var map = new naver.maps.Map('map', mapOptions);
-                                            var marker = new naver.maps.Marker({
-                                                position: new naver.maps.LatLng(37.561460, 126.973062),
-                                                map: map
-                                            })
-
-                                        </script>
 
 
+                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                <div class="wayicon">
+                                                    <div class="icon-back">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
+                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
+                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="wayhow">
+                                                    <div class="title">
+                                                        <span>버스</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div>
+                                                            <span style="font-weight: bold;">신한은행본점 [02233]</span>
+                                                            <br>
+                                                            <span style="color: rgb(155, 193, 132);">일반버스</span>
+                                                            <span style="color: rgb(19, 89, 197);"> <br></span>
+                                                            <br>
+                                                            790, 799
+                                                            <br>
+                                                            <span style="color: rgb()125, 28, 14);">광역버스 <br> </span>
+                                                            9401, 9703, 9714
+                                                            <br>
+                                                            <span style="color: rgb(145, 28, 14);">직행버스 <br></span>
+                                                            1000, 1200, 1900, 3201, 4101, 4103, 4108, 5000B, 5005, 5500-2, 8800, 9000, 9007, 9200, 9709, 9710, 9710-1
+                                                            <br>
+                                                            <span style="font-weight: bold;"><br>삼성본관앞 [02131]</span>
+                                                            <br>
+                                                            <span style="color: rgb(19, 89, 197);">간선버스</span>
+                                                            <br>
+                                                            406, 500, 504, 603, 700
+                                                            <br>
+                                                            <span style="color: rgb(155, 193, 132);">지선버스</span>
+                                                            <br>
+                                                            1711, 7011, 7022
+                                                            <br>
+                                                            <br>
+                                                            <span style="font-weight: bold;">시청앞 [02132 / 02128]</span>
+                                                            <br>
+                                                            <span style="color: rgb(19, 89, 197);">간선버스<br></span>
+                                                            150, 400, 401, 402, 405, 501, 502, 506, 708
+                                                            <br>
+                                                            <span style="color: rgb(155, 193, 132);">지선버스 <br></span>
+                                                            7016
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                <div class="wayicon">
+                                                    <div class="icon-back">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
+                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
+                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="wayhow">
+                                                    <div class="title">
+                                                        <span>자가용</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div>
+                                                            <span style="font-weight: bold;">네비게이션<br></span>
+                                                            "오펠리스" 또는 "퍼시픽타워" 입력
+                                                            <br>
+                                                            <span style="font-weight: bold;"><br>주소 검색<br></span>
+                                                            "세종대로9길 41" 또는 "서울 중구 서소문동 135" 입력
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                <div class="wayicon">
+                                                    <div class="icon-back">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
+                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
+                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="wayhow">
+                                                    <div class="title">
+                                                        <span>주차장</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div>
+                                                            숭례문 맞은편, 상공회의소 건물 뒤편
+                                                            <br>
+                                                            퍼시픽타워 지하주차장
+                                                            <br>
+                                                            3시간 무료주차 가능
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="notice-wrap">
+                                        <div class="boxs">
+                                            <div class="box fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                                                <div>
+                                                    <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                        <span class="inner white">포토부스 </span>
+                                                    </div>
+                                                    <div class="text fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                                        <div>
+                                                            포토부스 이벤트를 준비했습니다.
+                                                            <br>
+                                                            축하하는 마음 가득, 기억하고 싶은 그날을
+                                                            <br>
+                                                            예쁘고 멋진 사진으로 담아
+                                                            <br>
+                                                            저희의 결혼을 축하해주세요.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="rsvp-wrap fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                                    <div class="card">
+                                        <div class="title">
+                                            <span class="inner white">참석 의사 전달</span>
+                                        </div>
+                                        <div class="text">
+                                            <div>
+                                                축하의 마음으로 참석해주시는
+                                                <br>
+                                                모든 분들을 귀하게 모실 수 있도록
+                                                <br>
+                                                참석 의사를 전달 부탁드립니다.
+                                            </div>
+                                        </div>
+                                        <div class="m-button gothic">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-check">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                            참석 의사 전달하기
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="account-wrap">
+                                    <div class="s-subtitle fade-in white" style="opacity: 1; transform: translate(0px, 0px);"></div>
+                                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                        <span>마음 전하실 곳</span>
+                                    </div>
+                                    <!---->
+                                    <div class="c-account fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+
+                                        <ul class="c-account_wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <span class="target" id="account_number"></span>
+                                            <li class="account_number_li">
+                                                <span class="target" id="account_number2"></span>
+                                                <a href="#account_number2" class="open-account_number li-a" title="open">
+                                                    <div>
+                                                        <div class="title">
+                                                            <div>
+                                                                신랑측 계좌번호
+                                                            </div>
+                                                            <div class="arrow">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#account_number" class="close-account_number li-a" title="close">
+                                                    <div>
+                                                        <div class="title">
+                                                            <div>
+                                                                신랑측 계좌번호
+                                                            </div>
+                                                            <div class="arrow">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="number-wrap">
+                                                    <div class="text">
+                                                        <div class="inner">
+                                                            <span>
+                                                                <span class="bank">
+                                                                    우리
+                                                                </span>
+                                                                <span>
+                                                                    1002-860-748709
+                                                                </span>
+                                                            </span>
+                                                            <br>
+                                                            <span>
+                                                                차은우
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="btn-action">
+                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
+                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+                                                                    </path>
+                                                                </svg>
+                                                                복사
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                        <ul class="c-account_wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <span class="target" id="account_number"></span>
+                                            <li class="account_number_li">
+                                                <span class="target" id="account_number1"></span>
+                                                <a href="#account_number1" class="open-account_number li-a" title="open">
+                                                    <div>
+                                                        <div class="title">
+                                                            <div>
+                                                                신부측 계좌번호
+                                                            </div>
+                                                            <div class="arrow">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#account_number"  class="close-account_number li-a" title="close">
+                                                    <div>
+                                                        <div class="title">
+                                                            <div>
+                                                                신부측 계좌번호
+                                                            </div>
+                                                            <div class="arrow">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="number-wrap">
+                                                    <div class="text">
+                                                        <div class="inner">
+                                                            <span>
+                                                                <span class="bank">
+                                                                    우리
+                                                                </span>
+                                                                <span>
+                                                                    1002-860-748709
+                                                                </span>
+                                                            </span>
+                                                            <br>
+                                                            <span>
+                                                                신혜지
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="btn-action">
+                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
+                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+                                                                    </path>
+                                                                </svg>
+                                                                복사
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
+                                                            <span>
+                                                                <span class="bank">
+                                                                    우리
+                                                                </span>
+                                                                <span>
+                                                                    1002-860-748709
+                                                                </span>
+                                                            </span>
+                                                            <br>
+                                                            <span>
+                                                                신연규
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="btn-action">
+                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
+                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+                                                                    </path>
+                                                                </svg>
+                                                                복사
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
+                                                            <span>
+                                                                <span class="bank">
+                                                                    카카오뱅크
+                                                                </span>
+                                                                <span>
+                                                                    3333-09-5909332
+                                                                </span>
+                                                            </span>
+                                                            <br>
+                                                            <span>
+                                                                윤용인
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="btn-action">
+                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
+                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+                                                                    </path>
+                                                                </svg>
+                                                                복사
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
+                                                            <span>
+                                                                <span class="bank">
+                                                                    카카오뱅크
+                                                                </span>
+                                                                <span>
+                                                                    3333-09-5909332
+                                                                </span>
+                                                            </span>
+                                                            <br>
+                                                            <span>
+                                                                신혜원
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="btn-action">
+                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
+                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+                                                                    </path>
+                                                                </svg>
+                                                                복사
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div class="guestbook-wrap">
+                                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+
+                                        <div class="greetings-title">
+                                            방명록
+                                        </div>
+                                    </div>
+                                    <div class="c-guestbook gothic">
+                                        <div class="comments fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <div class="item white">
+                                                <div class="close"><span class="date">2025.01.30</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                        </svg></span></div>
+                                                <div class="name">상경천 </div>
+                                                <div class="text">결혼을 진심으로 축하드립니다 </div>
+                                            </div>
+                                            <div class="item white">
+                                                <div class="close"><span class="date">2025.01.15</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                        </svg></span></div>
+                                                <div class="name">박유진</div>
+                                                <div class="text">지우가 벌써 결혼이라니... 벌써 한달 뒤라니! 스무살 20대의 시작을 같이 해줘서 너무 고마운 내 친구. 하나만 말해도 열을 아는 척하면 척인 지우야 항상 응원하고 싸랑한다🥰</div>
+                                            </div>
+                                            <div class="item white">
+                                                <div class="close"><span class="date">2025.01.09</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                        </svg></span></div>
+                                                <div class="name">정재원</div>
+                                                <div class="text">너무 잘어울리는 태훈이랑 지우님 !!! 평생 행복하기를~~</div>
+                                            </div>
+                                            <div class="item white">
+                                                <div class="close"><span class="date">2025.01.06</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                        </svg></span></div>
+                                                <div class="name">서상욱</div>
+                                                <div class="text">너무 잘 어울리는 두 분 결혼 축하드립니다~!!<br>예쁜 사랑 하시고 평생 행복하게 사십쇼~~</div>
+                                            </div>
+                                            <div class="item white">
+                                                <div class="close"><span class="date">2025.01.01</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                        </svg></span></div>
+                                                <div class="name">정인서</div>
+                                                <div class="text">바이</div>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                        <div class="tools fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <div class="pagination-wrap">
+                                                <div onmousedown="return false" class="pagination">
+                                                    <div>
+                                                        <!---->
+                                                        <div class="pagination-number pagination-active">
+                                                            1
+                                                        </div>
+                                                        <div class="pagination-number">
+                                                            2
+                                                        </div>
+                                                        <div class="pagination-number">
+                                                            3
+                                                        </div>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="writing"><button class="m-button dark gothic">
+                                                    작성하기
+                                                </button></div>
+                                        </div>
+                                        <!---->
+
+                                        <div aria-expanded="true" data-modal="c-guestbook-delete-modal" class="v--modal-overlay" style="background: rgba(0, 0, 0, 0.7); border-radius: 0px;">
+                                            <div class="v--modal-background-click">
+                                                <div class="v--modal-top-right"></div>
+                                                <div class="v--modal-box v--modal vue-dialog c-guestbook-delete-modal" style="top: 440px; left: 150px; width: 360px; height: auto;">
+                                                    <div class="c-guestbook-header"><span>방명록</span>
+                                                        <div class="btn-close"><span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                                                </svg></span></div>
+                                                    </div>
+                                                    <div onselectstart="return false" class="c-guestbook-modal-wrap">
+                                                        <div class="c-guestbook-modal-inner">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col style="width: 100px;">
+                                                                    <col>
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>이름</th>
+                                                                        <td><input type="text" maxlength="12" placeholder=""></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>비밀번호</th>
+                                                                        <td><input type="password" maxlength="15"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"><textarea maxlength="100" placeholder="100자 이내로 작성해주세요"></textarea></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table> <button class="btn-submit">
+                                                                작성하기
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -396,6 +945,6 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+
+</body></html>
