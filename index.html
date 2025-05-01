@@ -12,12 +12,16 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script type="text/javascript" src="java.js"></script>
-    
+    <!-- fade 효과 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3r7ib4c1ob"></script>
     <script src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="javascript.js"></script>
-    <script language="Javascript">function click() {return;}</script>
 
 
 
@@ -41,24 +45,28 @@
                                 <span>10</span>
                             </span>
                         </div>
-                        <div class="day_of_the_week">
-                            wedding day
-                        </div>
+                       
                     </div>
-                    <div>
-                        <img src="7ccb85b344e6023cdd7a9112735c8faa.jpg" width="100%" height="100%" alt="메인 웨딩 사진" class="intro-blend-image">
-                    </div>
-                    <div class="bottom_info">
-                        <div class="name">
-                            <div class="groom">차은우</div>
-                            <div class="and">&#x2764;</div>
-                            <div class="bride">신혜지</div>
+                    <div class="img">
+                        <div class="image-wrap">
+                            <img src="7ccb85b344e6023cdd7a9112735c8faa.jpg" width="100%" height="100%" alt="메인 웨딩 사진" class="intro-blend-image">
+                            <div class="title-over">
+                                <div class="line-left"> We are getting </div>
+                                <div class="line-right">Married</div>
+                            </div>
                         </div>
-                        <div class="date_place">
-                            <div class="info">
-                                2025년 11월 09일 일요일 오후 1시 10분
-                                <br>
-                                혜원 웨딩컨벤션 20F 시네원홀
+                        <div class="bottom_info">
+                            <div class="name">
+                                <div class="groom">차은우</div>
+                                <div class="and">&#x2764;</div>
+                                <div class="bride">신혜지</div>
+                            </div>
+                            <div class="date_place">
+                                <div class="info">
+                                    2025년 11월 09일 일요일 오후 1시 10분
+                                    <br>
+                                    혜원 웨딩컨벤션 20F 시네원홀
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +74,7 @@
 
                 <div class="invitation-wrap">
 
-                    <div class="invi_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="invi_title fade-in" style="opacity: 0;">
                         <div class="title"> 초대합니다 </div>
                     </div>
 
@@ -84,15 +92,15 @@
                         부디 오셔서 함께해 주세요.
                     </div>
 
-                    <div class="parents-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="parents-wrap fade-in" style="opacity: 0;">
                         <div class="groom">
                             <span>
                                 <span class="groom-p">
-                                    차길동
+                                    현빈
                                     <span> · </span>
                                 </span>
                                 <span class="groom-p">
-                                    홍길동
+                                    손예진
                                 </span>
                             </span>
 
@@ -101,7 +109,7 @@
                                 <span>아들</span>
                             </span>
 
-                            <span groom class="name">은우</span>
+                            <span groom class="name blue">은우</span>
                         </div>
                         <div class="bride">
                             <span>
@@ -119,40 +127,103 @@
                                 <span>딸</span>
                             </span>
 
-                            <span bride class="name">혜지</span>
+                            <span bride class="name pink">혜지</span>
                         </div>
                     </div>
 
-                    <div class="contact-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                        <div class="contact-button">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                            </svg>
-
-
-
-                            연락하기
+                    <div class="contact-wrap">
+                        <div class="contact-button" onclick="openModal()">
+                            <span>연락하기</span>
                         </div>
                     </div>
+
+                    <!-- 모달 -->
+                    <div id="contactModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+                            <div class="modal-title">
+                                연락하기
+                            </div>
+
+
+                            <div class="contact-group" style="margin-bottom: 20px;">
+                                <!-- <div class="division"> 신랑측 </div> -->
+
+                                <div class="contact-row">
+                                    <span class="blue">신랑</span><strong>차은우</strong>
+                                    <div class="icons blue">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="blue">신랑 아버지</span><strong>현빈</strong>
+                                    <div class="icons blue">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="blue">신랑 어머니</span><strong>손예진</strong>
+                                    <div class="icons blue">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="contact-group" style="margin-top: 20px;">
+                                <!-- <div class="division"> 신부측 </div> -->
+
+                                <div class="contact-row">
+                                    <span class="pink">신부</span><strong>신혜지</strong>
+                                    <div class="icons pink">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="pink">신부 아버지</span><strong>신연규</strong>
+                                    <div class="icons pink">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="pink">신부 어머니</span><strong>윤용인</strong>
+                                    <div class="icons pink">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="pink">신부 동생</span><strong>신혜원</strong>
+                                    <div class="icons pink">
+                                        <i class="fas fa-phone"></i>
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
 
 
                 <div>
 
-                    <div class="calendar-wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                        <div class="calenar-inner">
-                            <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                <div class="date" style="margin-bottom: 0px;">
-                                    <div> 2025.11.09</div>
-                                </div>
-                                <div class="hours"> 일요일 오후 1시 10분 </div>
+                    <div class="calendar-wrap">
+                        <div class="calendar-inner">
+                            <div class="title">
+                                <div class="date">2025.11.09</div>
+                                <div class="hours">일요일 오후 1시 10분</div>
                             </div>
 
-                            <div class="c-calendar fade-in" style="opacity: 1; transform: translate(0px; 0px;);">
-
-                                <table cellspacing="0" class="c-calendar-table fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                            <div class="c-calendar">
+                                <table cellspacing="0" class="c-calendar-table">
                                     <thead>
                                         <tr>
                                             <th>일</th>
@@ -164,741 +235,279 @@
                                             <th>토</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">1</span>
-                                            </td>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
                                         </tr>
-
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
-                                                <span class="">2</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">3</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">4</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">5</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">6</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">7</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">8</span>
-                                            </td>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
                                         </tr>
-
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
+                                        <tr>
+                                            <td class="wedding">
                                                 <div class="c-calendar-wedding_day">
-                                                    <div class="">09</div>
+                                                    <div class="heart">
+                                                        <div class="d-day">09</div>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td style="position: relative">
-                                                <span class="">10</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">11</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">12</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">13</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">14</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">15</span>
-                                            </td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
                                         </tr>
-
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
-                                                <span class="">16</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">17</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">18</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">19</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">20</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">21</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">22</span>
-                                            </td>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
                                         </tr>
-
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
-                                                <span class="">23</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">24</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">25</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">26</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">27</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">28</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class="">29</span>
-                                            </td>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
                                         </tr>
-
-                                        <tr class="face-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <td style="position: relative">
-                                                <span class="">30</span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
-                                            <td style="position: relative">
-                                                <span class=""></span>
-                                            </td>
+                                        <tr>
+                                            <td>30</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
-
                                     </tbody>
-
-
                                 </table>
-
                             </div>
 
+                            <!-- ✅ Countdown Timer -->
+                           <div class="countdown">
+  <div class="timer-inline">
+    <div class="timer-item">
+      <div class="label">DAYS</div>
+      <div class="value" id="days">00</div>
+    </div>
+    <div class="colon">:</div>
+    <div class="timer-item">
+      <div class="label">HOUR</div>
+      <div class="value" id="hours">00</div>
+    </div>
+    <div class="colon">:</div>
+    <div class="timer-item">
+      <div class="label">MIN</div>
+      <div class="value" id="minutes">00</div>
+    </div>
+    <div class="colon">:</div>
+    <div class="timer-item">
+      <div class="label">SEC</div>
+      <div class="value" id="seconds">00</div>
+    </div>
+  </div>
+  <p class="message">
+    은우 <span class="heart">♥</span> 혜지의 결혼식이 <span id="daysLeft">00</span>일 남았습니다.
+  </p>
+</div>
 
-                            <div class="gallery-wrap">
-                                <div class="gal_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                    <div class="title">갤러리</div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="gallery_container fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                    <div>
-                                        <div class="gallery-grid-container">
-                                            <div class="gallery-grid grid3" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(10, auto)">
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
-                                                <div class="grid-item">
-                                                    <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                                </div>
+                <div class="gallery-wrap">
+                    <div class="gal_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="title">갤러리</div>
+                    </div>
 
-                                            </div>
-                                        </div>
+                    <div class="gallery_container fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div>
+                            <div class="gallery-grid-container">
+                                <div class="gallery-grid grid3" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(10, auto)">
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
                                     </div>
-                                </div>
-
-                            </div>
-
-                            <div class="map-wrap">
-                                <div class="m-title fade-in" style="opacity: 1; transform: translate(0px 0px);">
-                                    <div class="title"> 오시는 길 </div>
-
-                                    <div>
-                                        <div class="location-wrap">
-                                            <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
-                                                <div> 시네원 웨딩홀 5F 시네원홀 </div>
-                                            </div>
-                                            <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
-                                                <div> 서울 동작구 혜원대로 10길 10 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="map-inner fade-in" style="opacity: 1; transform: translate(0px 0px);">
-
-                                            <div>
-                                                <div id="map" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"></div>
-
-                                                <script>
-                                                    var mapOptions = {
-                                                        center: new naver.maps.LatLng(37.651013, 126.787226),
-                                                        zoom: 17.4,
-                                                        minZoom: 10
-                                                    };
-
-                                                    var map = new naver.maps.Map('map', mapOptions);
-                                                    var marker = new naver.maps.Marker({
-                                                        position: new naver.maps.LatLng(37.651013, 126.787226),
-                                                        map: map
-                                                    })
-                                                </script>
-                                            </div>
-
-                                            <div>
-                                                <div class="map-navi gothic">
-                                                    <div class="navi">
-                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_navermap_w48.png">
-                                                        <span>네이버 지도</span>
-                                                    </div>
-                                                    <div class="navi">
-                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_kakaonavi_w48.png">
-                                                        <span>카카오 내비</span>
-                                                    </div>
-                                                    <div class="navi_none">
-                                                        <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_tmap_w48.png">
-                                                        <span>티맵</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
+                                    </div>
+                                    <div class="grid-item">
+                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
                                     </div>
 
-                                    <div>
-                                        <div class="waytocome-wrap">
-                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                <div class="wayicon">
-                                                    <div class="icon-back">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
-                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
-                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="wayhow">
-                                                    <div class="title">
-                                                        <span>지하철</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div>
-                                                            (1호선 · 2호선) 시청역 9번 출구 → 도보 4분
-                                                            <br>
-                                                            (1호선 · 4호선) 서울역 3번 출구 → 도보 7분
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                <div class="wayicon">
-                                                    <div class="icon-back">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
-                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
-                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="wayhow">
-                                                    <div class="title">
-                                                        <span>버스</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div>
-                                                            <span style="font-weight: bold;">신한은행본점 [02233]</span>
-                                                            <br>
-                                                            <span style="color: rgb(155, 193, 132);">일반버스</span>
-                                                            <span style="color: rgb(19, 89, 197);"> <br></span>
-                                                            <br>
-                                                            790, 799
-                                                            <br>
-                                                            <span style="color: rgb()125, 28, 14);">광역버스 <br> </span>
-                                                            9401, 9703, 9714
-                                                            <br>
-                                                            <span style="color: rgb(145, 28, 14);">직행버스 <br></span>
-                                                            1000, 1200, 1900, 3201, 4101, 4103, 4108, 5000B, 5005, 5500-2, 8800, 9000, 9007, 9200, 9709, 9710, 9710-1
-                                                            <br>
-                                                            <span style="font-weight: bold;"><br>삼성본관앞 [02131]</span>
-                                                            <br>
-                                                            <span style="color: rgb(19, 89, 197);">간선버스</span>
-                                                            <br>
-                                                            406, 500, 504, 603, 700
-                                                            <br>
-                                                            <span style="color: rgb(155, 193, 132);">지선버스</span>
-                                                            <br>
-                                                            1711, 7011, 7022
-                                                            <br>
-                                                            <br>
-                                                            <span style="font-weight: bold;">시청앞 [02132 / 02128]</span>
-                                                            <br>
-                                                            <span style="color: rgb(19, 89, 197);">간선버스<br></span>
-                                                            150, 400, 401, 402, 405, 501, 502, 506, 708
-                                                            <br>
-                                                            <span style="color: rgb(155, 193, 132);">지선버스 <br></span>
-                                                            7016
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                <div class="wayicon">
-                                                    <div class="icon-back">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
-                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
-                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="wayhow">
-                                                    <div class="title">
-                                                        <span>자가용</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div>
-                                                            <span style="font-weight: bold;">네비게이션<br></span>
-                                                            "오펠리스" 또는 "퍼시픽타워" 입력
-                                                            <br>
-                                                            <span style="font-weight: bold;"><br>주소 검색<br></span>
-                                                            "세종대로9길 41" 또는 "서울 중구 서소문동 135" 입력
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="box fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                <div class="wayicon">
-                                                    <div class="icon-back">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="222F3D" viewBox="0 0 16 16">
-                                                            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3" />
-                                                            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="wayhow">
-                                                    <div class="title">
-                                                        <span>주차장</span>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div>
-                                                            숭례문 맞은편, 상공회의소 건물 뒤편
-                                                            <br>
-                                                            퍼시픽타워 지하주차장
-                                                            <br>
-                                                            3시간 무료주차 가능
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="map-wrap">
+                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                        <div class="title"> 오시는 길 </div>
+
+                        <div>
+                            <div class="location-wrap">
+                                <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                    <div> 시네원 웨딩홀 5F 시네원홀 </div>
+                                </div>
+                                <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                    <div> 서울 동작구 혜원대로 10길 10 </div>
+                                </div>
+                            </div>
+
+                            <div class="map-inner fade-in" style="opacity: 1; transform: translate(0px 0px);">
+
                                 <div>
-                                    <div class="notice-wrap">
-                                        <div class="boxs">
-                                            <div class="box fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
-                                                <div>
-                                                    <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                        <span class="inner white">포토부스 </span>
-                                                    </div>
-                                                    <div class="text fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                                        <div>
-                                                            포토부스 이벤트를 준비했습니다.
-                                                            <br>
-                                                            축하하는 마음 가득, 기억하고 싶은 그날을
-                                                            <br>
-                                                            예쁘고 멋진 사진으로 담아
-                                                            <br>
-                                                            저희의 결혼을 축하해주세요.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div id="map" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"></div>
+
+                                    <script>
+                                        var mapOptions = {
+                                            center: new naver.maps.LatLng(37.651013, 126.787226),
+                                            zoom: 17.4,
+                                            minZoom: 10
+                                        };
+
+                                        var map = new naver.maps.Map('map', mapOptions);
+                                        var marker = new naver.maps.Marker({
+                                            position: new naver.maps.LatLng(37.651013, 126.787226),
+                                            map: map
+                                        })
+                                    </script>
+                                </div>
+
+                                <div>
+                                    <div class="map-navi gothic">
+                                        <div class="navi">
+                                            <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_navermap_w48.png">
+                                            <span>네이버 지도</span>
+                                        </div>
+                                        <div class="navi">
+                                            <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_kakaonavi_w48.png">
+                                            <span>카카오 내비</span>
+                                        </div>
+                                        <div class="navi_none">
+                                            <img src="https://mcard.fromtoday.co.kr/mcard/assets/images/icon_tmap_w48.png">
+                                            <span>티맵</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div>
-                                <div class="rsvp-wrap fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
-                                    <div class="card">
-                                        <div class="title">
-                                            <span class="inner white">참석 의사 전달</span>
-                                        </div>
-                                        <div class="text">
-                                            <div>
-                                                축하의 마음으로 참석해주시는
-                                                <br>
-                                                모든 분들을 귀하게 모실 수 있도록
-                                                <br>
-                                                참석 의사를 전달 부탁드립니다.
-                                            </div>
-                                        </div>
-                                        <div class="m-button gothic">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-check">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                            참석 의사 전달하기
-                                        </div>
+                        <div class="waytocome-wrap">
+
+                            <!-- 지하철 -->
+                            <div class="box">
+                                <div class="wayicon">
+                                    <div class="icon-back">
+                                        <i class="fas fa-train-subway"></i>
+                                    </div>
+                                </div>
+                                <div class="wayhow">
+                                    <div class="title"><span>지하철</span></div>
+                                    <div class="content">
+                                        <div>(1호선 · 2호선) 시청역 9번 출구 → 도보 4분</div>
+                                        <div>(1호선 · 4호선) 서울역 3번 출구 → 도보 7분</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <div class="account-wrap">
-                                    <div class="s-subtitle fade-in white" style="opacity: 1; transform: translate(0px, 0px);"></div>
-                                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                        <span>마음 전하실 곳</span>
+                            <!-- 버스 -->
+                            <div class="box">
+                                <div class="wayicon">
+                                    <div class="icon-back">
+                                        <i class="fas fa-bus"></i>
                                     </div>
-                                    <!---->
-                                    <div class="c-account fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                </div>
+                                <div class="wayhow">
+                                    <div class="title"><span>버스</span></div>
+                                    <div class="content">
+                                        <div class="bold">신한은행본점 [02233]</div>
+                                        <div class="bus-type-plain">일반버스</div>
+                                        <div>790, 799</div>
+                                        <div class="bus-type-direct">광역버스</div>
+                                        <div>9401, 9703, 9714</div>
+                                        <div class="bus-type-direct">직행버스</div>
+                                        <div>1000, 1200, 1900, 3201, ...</div>
 
-                                        <ul class="c-account_wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <span class="target" id="account_number"></span>
-                                            <li class="account_number_li">
-                                                <span class="target" id="account_number2"></span>
-                                                <a href="#account_number2" class="open-account_number li-a" title="open" onclick="javascript:click()">
-                                                    <div>
-                                                        <div class="title">
-                                                            <div>
-                                                                신랑측 계좌번호
-                                                            </div>
-                                                            <div class="arrow">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                                                    </path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#account_number" class="close-account_number li-a" title="close" onclick="click(event)">
-                                                    <div>
-                                                        <div class="title">
-                                                            <div>
-                                                                신랑측 계좌번호
-                                                            </div>
-                                                            <div class="arrow">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                                                    </path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="number-wrap">
-                                                    <div class="text">
-                                                        <div class="inner">
-                                                            <span>
-                                                                <span class="bank">
-                                                                    우리
-                                                                </span>
-                                                                <span>
-                                                                    1234-5678-910203
-                                                                </span>
-                                                            </span>
-                                                            <br>
-                                                            <span>
-                                                                차은우
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="btn-action">
-                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
-                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
-                                                                    </path>
-                                                                </svg>
-                                                                복사
-                                                            </div>
-                                                            <!---->
-                                                        </div>
-                                                    </div>
+                                        <br>
+                                        <div class="bold">삼성본관앞 [02131]</div>
+                                        <div class="bus-type-blue">간선버스</div>
+                                        <div>406, 500, 504, ...</div>
+                                        <div class="bus-type-plain">지선버스</div>
+                                        <div>1711, 7011, 7022</div>
 
-
-                                                </div>
-                                            </li>
-                                        </ul>
-
-
-                                        <ul class="c-account_wrap fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <span class="target" id="account_number"></span>
-                                            <li class="account_number_li">
-                                                <span class="target" id="account_number1"></span>
-                                                <a href="#account_number1" class="open-account_number li-a" title="open" onclick="click(event)">
-                                                    <div>
-                                                        <div class="title">
-                                                            <div>
-                                                                신부측 계좌번호
-                                                            </div>
-                                                            <div class="arrow">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                                                    </path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#account_number"  class="close-account_number li-a" title="close">
-                                                    <div>
-                                                        <div class="title">
-                                                            <div>
-                                                                신부측 계좌번호
-                                                            </div>
-                                                            <div class="arrow">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                                                                    </path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <div class="number-wrap">
-                                                    <div class="text">
-                                                        <div class="inner">
-                                                            <span>
-                                                                <span class="bank">
-                                                                    우리
-                                                                </span>
-                                                                <span>
-                                                                    1002-860-748709
-                                                                </span>
-                                                            </span>
-                                                            <br>
-                                                            <span>
-                                                                신혜지
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="btn-action">
-                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
-                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
-                                                                    </path>
-                                                                </svg>
-                                                                복사
-                                                            </div>
-                                                            <!---->
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
-                                                            <span>
-                                                                <span class="bank">
-                                                                    우리
-                                                                </span>
-                                                                <span>
-                                                                    1002-860-748709
-                                                                </span>
-                                                            </span>
-                                                            <br>
-                                                            <span>
-                                                                신연규
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="btn-action">
-                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
-                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
-                                                                    </path>
-                                                                </svg>
-                                                                복사
-                                                            </div>
-                                                            <!---->
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
-                                                            <span>
-                                                                <span class="bank">
-                                                                    카카오뱅크
-                                                                </span>
-                                                                <span>
-                                                                    3333-09-5909332
-                                                                </span>
-                                                            </span>
-                                                            <br>
-                                                            <span>
-                                                                윤용인
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="btn-action">
-                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
-                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
-                                                                    </path>
-                                                                </svg>
-                                                                복사
-                                                            </div>
-                                                            <!---->
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <div class="inner" style="border-top: 1px solid rgba(0, 0, 0, .05);">
-                                                            <span>
-                                                                <span class="bank">
-                                                                    카카오뱅크
-                                                                </span>
-                                                                <span>
-                                                                    3333-09-5909332
-                                                                </span>
-                                                            </span>
-                                                            <br>
-                                                            <span>
-                                                                신혜원
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <div class="btn-action">
-                                                                <svg aria-hidden="true" width="46.08" height="46.08" viewBox="0.48 0.48 23.04 23.04" fill="#222F3D" class="ov-icon" style="font-size: 2.88em;">
-                                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
-                                                                    </path>
-                                                                </svg>
-                                                                복사
-                                                            </div>
-                                                            <!---->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-
+                                        <br>
+                                        <div class="bold">시청앞 [02132 / 02128]</div>
+                                        <div class="bus-type-blue">간선버스</div>
+                                        <div>150, 400, 401, ...</div>
+                                        <div class="bus-type-plain">지선버스</div>
+                                        <div>7016</div>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div>
-                                <div class="guestbook-wrap">
-                                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-
-                                        <div class="greetings-title">
-                                            방명록
-                                        </div>
+                            <!-- 자가용 -->
+                            <div class="box">
+                                <div class="wayicon">
+                                    <div class="icon-back">
+                                        <i class="fas fa-car"></i>
                                     </div>
-                                    <div class="c-guestbook gothic">
-                                        <div class="comments fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <div class="item white">
-                                                <div class="close"><span class="date">2025.01.30</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                                        </svg></span></div>
-                                                <div class="name">상경천 </div>
-                                                <div class="text">결혼을 진심으로 축하드립니다 </div>
-                                            </div>
-                                            <div class="item white">
-                                                <div class="close"><span class="date">2025.01.15</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                                        </svg></span></div>
-                                                <div class="name">박유진</div>
-                                                <div class="text">지우가 벌써 결혼이라니... 벌써 한달 뒤라니! 스무살 20대의 시작을 같이 해줘서 너무 고마운 내 친구. 하나만 말해도 열을 아는 척하면 척인 지우야 항상 응원하고 싸랑한다🥰</div>
-                                            </div>
-                                            <div class="item white">
-                                                <div class="close"><span class="date">2025.01.09</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                                        </svg></span></div>
-                                                <div class="name">정재원</div>
-                                                <div class="text">너무 잘어울리는 태훈이랑 지우님 !!! 평생 행복하기를~~</div>
-                                            </div>
-                                            <div class="item white">
-                                                <div class="close"><span class="date">2025.01.06</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                                        </svg></span></div>
-                                                <div class="name">서상욱</div>
-                                                <div class="text">너무 잘 어울리는 두 분 결혼 축하드립니다~!!<br>예쁜 사랑 하시고 평생 행복하게 사십쇼~~</div>
-                                            </div>
-                                            <div class="item white">
-                                                <div class="close"><span class="date">2025.01.01</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                                        </svg></span></div>
-                                                <div class="name">정인서</div>
-                                                <div class="text">바이</div>
-                                            </div>
-                                            <!---->
-                                        </div>
-                                        <div class="tools fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                            <div class="pagination-wrap">
-                                                <div onmousedown="return false" class="pagination">
-                                                    <div>
-                                                        <!---->
-                                                        <div class="pagination-number pagination-active">
-                                                            1
-                                                        </div>
-                                                        <div class="pagination-number">
-                                                            2
-                                                        </div>
-                                                        <div class="pagination-number">
-                                                            3
-                                                        </div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="writing"><button class="m-button dark gothic">
-                                                    작성하기
-                                                </button></div>
-                                        </div>
-                                        <!---->
+                                </div>
+                                <div class="wayhow">
+                                    <div class="title"><span>자가용</span></div>
+                                    <div class="content">
+                                        <div class="bold">네비게이션</div>
+                                        <div>"오펠리스" 또는 "퍼시픽타워" 입력</div>
+                                        <div class="bold">주소 검색</div>
+                                        <div>"세종대로9길 41" 또는 "서울 중구 서소문동 135" 입력</div>
+                                    </div>
+                                </div>
+                            </div>
 
-
+                            <!-- 주차장 -->
+                            <div class="box">
+                                <div class="wayicon">
+                                    <div class="icon-back">
+                                        <i class="fas fa-square-parking"></i>
+                                    </div>
+                                </div>
+                                <div class="wayhow">
+                                    <div class="title"><span>주차장</span></div>
+                                    <div class="content">
+                                        <div>숭례문 맞은편, 상공회의소 건물 뒤편</div>
+                                        <div>퍼시픽타워 지하주차장</div>
+                                        <div>3시간 무료주차 가능</div>
                                     </div>
                                 </div>
                             </div>
@@ -906,11 +515,377 @@
                         </div>
 
                     </div>
-
                 </div>
+                <div>
+                    <div>
+                        <div class="notice-wrap">
+                            <div class="boxs">
+                                <div class="box fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                                    <div>
+                                        <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <span class="inner white">포토부스 </span>
+                                        </div>
+                                        <div class="text fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                            <div>
+                                                포토부스 이벤트를 준비했습니다.
+                                                <br>
+                                                축하하는 마음 가득, 기억하고 싶은 그날을
+                                                <br>
+                                                예쁘고 멋진 사진으로 담아
+                                                <br>
+                                                저희의 결혼을 축하해주세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="rsvp-wrap fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="card">
+                            <div class="title">
+                                <span class="inner white">참석 의사 전달</span>
+                            </div>
+                            <div class="text">
+                                <div>
+                                    축하의 마음으로 참석해주시는
+                                    <br>
+                                    모든 분들을 귀하게 모실 수 있도록
+                                    <br>
+                                    참석 의사를 전달 부탁드립니다.
+                                </div>
+                            </div>
+                            <div class="m-button gothic">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-check">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                참석 의사 전달하기
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="account-wrap">
+                        <div class="s-subtitle fade-in white" style="opacity: 1; transform: translate(0px, 0px);"></div>
+                        <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                            <span>마음 전하실 곳</span>
+                        </div>
+                        <!---->
+                        <div class="c-account fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+
+                            <div class="account-wrap">
+                                <ul>
+                                    <li class="account_number_li">
+                                        <a href="javascript:void(0);" class="open-account_number li-a">
+                                            <div class="title title_inner">
+                                                <span>신부측 계좌번호</span>
+                                                <span class="arrow">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <div class="number-wrap">
+                                            <div class="inner">
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신혜지</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신연규</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">윤용인</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신혜원</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="account_number_li">
+                                        <a href="javascript:void(0);" class="open-account_number li-a">
+                                            <div class="title title_inner">
+                                                <span>신부측 계좌번호</span>
+                                                <span class="arrow">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <div class="number-wrap">
+                                            <div class="inner">
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신혜지</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신연규</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">윤용인</div>
+                                                </div>
+                                                <hr>
+                                                <div class="account-item">
+                                                    <div class="account-row">
+                                                        <div class="account-info">
+                                                            <span class="bank-name">우리</span>
+                                                            <span class="account-number">1234-123-123456</span>
+                                                        </div>
+                                                        <div class="btn-action">복사</div>
+                                                    </div>
+                                                    <div class="account-holder">신혜원</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div>
+                    <div class="guestbook-wrap">
+                        <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+
+                            <div class="greetings-title">
+                                방명록
+                            </div>
+                        </div>
+                        <div class="c-guestbook gothic">
+                            <div class="comments fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                <div class="item white">
+                                    <div class="close"><span class="date">2025.01.30</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                            </svg></span></div>
+                                    <div class="name">상경천 </div>
+                                    <div class="text">결혼을 진심으로 축하드립니다 </div>
+                                </div>
+                                <div class="item white">
+                                    <div class="close"><span class="date">2025.01.15</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                            </svg></span></div>
+                                    <div class="name">박유진</div>
+                                    <div class="text">지우가 벌써 결혼이라니... 벌써 한달 뒤라니! 스무살 20대의 시작을 같이 해줘서 너무 고마운 내 친구. 하나만 말해도 열을 아는 척하면 척인 지우야 항상 응원하고 싸랑한다🥰</div>
+                                </div>
+                                <div class="item white">
+                                    <div class="close"><span class="date">2025.01.09</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                            </svg></span></div>
+                                    <div class="name">정재원</div>
+                                    <div class="text">너무 잘어울리는 태훈이랑 지우님 !!! 평생 행복하기를~~</div>
+                                </div>
+                                <div class="item white">
+                                    <div class="close"><span class="date">2025.01.06</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                            </svg></span></div>
+                                    <div class="name">서상욱</div>
+                                    <div class="text">너무 잘 어울리는 두 분 결혼 축하드립니다~!!<br>예쁜 사랑 하시고 평생 행복하게 사십쇼~~</div>
+                                </div>
+                                <div class="item white">
+                                    <div class="close"><span class="date">2025.01.01</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
+                                            </svg></span></div>
+                                    <div class="name">정인서</div>
+                                    <div class="text">바이</div>
+                                </div>
+                                <!---->
+                            </div>
+                            <div class="tools fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                <div class="pagination-wrap">
+                                    <div onmousedown="return false" class="pagination">
+                                        <div>
+                                            <!---->
+                                            <div class="pagination-number pagination-active">
+                                                1
+                                            </div>
+                                            <div class="pagination-number">
+                                                2
+                                            </div>
+                                            <div class="pagination-number">
+                                                3
+                                            </div>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="writing"><button class="m-button dark gothic">
+                                        작성하기
+                                    </button></div>
+                            </div>
+                            <!---->
+
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
     </div>
 
+
+
+    <script type="text/javascript" src="java.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 계좌번호 토글 기능 (하나만 열리도록)
+            document.querySelectorAll('.account_number_li').forEach(item => {
+                const title = item.querySelector('.title');
+                title.addEventListener('click', () => {
+                    document.querySelectorAll('.account_number_li').forEach(other => {
+                        if (other !== item) other.classList.remove('open');
+                    });
+                    item.classList.toggle('open');
+                });
+            });
+
+            // 복사 기능
+            document.querySelectorAll('.btn-action').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // 클릭이 열기 토글에 영향을 주지 않도록 방지
+                    const accountText = this.parentElement.querySelector('.account-number').innerText;
+                    navigator.clipboard.writeText(accountText.trim())
+                        .then(() => {
+                            showCopyToast(); // ✅ 복사 성공 시 알림 표시
+                            this.textContent = '복사됨';
+                            setTimeout(() => this.textContent = '복사', 1500);
+                        })
+                        .catch(err => {
+                            console.error('복사 실패:', err);
+                        });
+                });
+            });
+        });
+
+        //복사 알림
+        function showCopyToast(message = '복사되었습니다!') {
+            const toast = document.getElementById('copy-toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 1500); // 1.5초 후 사라짐
+        }
+    </script>
+
+
+    <script>
+        // 연락하기 누르면 열리는 모달
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        // ESC 키로도 닫기
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+    <script>
+        //스톱워치
+        function updateCountdown() {
+            const targetDate = new Date("2025-06-04T00:00:00");
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.getElementById("countdown").innerHTML = "00 : 00 : 00 : 00";
+                document.getElementById("daysLeft").textContent = "0";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("days").textContent = String(days).padStart(2, '0');
+            document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+            document.getElementById("daysLeft").textContent = days;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+    <div id="copy-toast" class="copy-toast">복사되었습니다!</div> <!-- 복사 알림 -->
 
 </body></html>
