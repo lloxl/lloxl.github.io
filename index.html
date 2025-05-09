@@ -45,7 +45,7 @@
                                 <span>10</span>
                             </span>
                         </div>
-                       
+
                     </div>
                     <div class="img">
                         <div class="image-wrap">
@@ -58,7 +58,7 @@
                         <div class="bottom_info">
                             <div class="name">
                                 <div class="groom">차은우</div>
-                                <div class="and">&#x2764;</div>
+                                <div class="and"></div>
                                 <div class="bride">신혜지</div>
                             </div>
                             <div class="date_place">
@@ -74,11 +74,11 @@
 
                 <div class="invitation-wrap">
 
-                    <div class="invi_title fade-in" style="opacity: 0;">
+                    <div class="invi_title fade-in">
                         <div class="title"> 초대합니다 </div>
                     </div>
 
-                    <div class="text fade-in center" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="text fade-in center">
                         서로의 마음에 작은 빛이 되어 <br>
                         같은 곳을 바라보며 걸어온 저희 두 사람이 <br>
                         이제 하나의 길을 함께 가고자 합니다. <br>
@@ -92,7 +92,7 @@
                         부디 오셔서 함께해 주세요.
                     </div>
 
-                    <div class="parents-wrap fade-in" style="opacity: 0;">
+                    <div class="parents-wrap fade-in">
                         <div class="groom">
                             <span>
                                 <span class="groom-p">
@@ -139,7 +139,7 @@
 
                     <!-- 모달 -->
                     <div id="contactModal" class="modal">
-                        <div class="modal-content">
+                        <div class="modal-content01">
                             <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
                             <div class="modal-title">
                                 연락하기
@@ -301,91 +301,86 @@
                             </div>
 
                             <!-- ✅ Countdown Timer -->
-                           <div class="countdown">
-  <div class="timer-inline">
-    <div class="timer-item">
-      <div class="label">DAYS</div>
-      <div class="value" id="days">00</div>
-    </div>
-    <div class="colon">:</div>
-    <div class="timer-item">
-      <div class="label">HOUR</div>
-      <div class="value" id="hours">00</div>
-    </div>
-    <div class="colon">:</div>
-    <div class="timer-item">
-      <div class="label">MIN</div>
-      <div class="value" id="minutes">00</div>
-    </div>
-    <div class="colon">:</div>
-    <div class="timer-item">
-      <div class="label">SEC</div>
-      <div class="value" id="seconds">00</div>
-    </div>
-  </div>
-  <p class="message">
-    은우 <span class="heart">♥</span> 혜지의 결혼식이 <span id="daysLeft">00</span>일 남았습니다.
-  </p>
-</div>
+                            <div class="countdown">
+                                <div class="timer-inline">
+                                    <div class="timer-item">
+                                        <div class="label">DAYS</div>
+                                        <div class="value" id="days">00</div>
+                                    </div>
+                                    <div class="colon">:</div>
+                                    <div class="timer-item">
+                                        <div class="label">HOUR</div>
+                                        <div class="value" id="hours">00</div>
+                                    </div>
+                                    <div class="colon">:</div>
+                                    <div class="timer-item">
+                                        <div class="label">MIN</div>
+                                        <div class="value" id="minutes">00</div>
+                                    </div>
+                                    <div class="colon">:</div>
+                                    <div class="timer-item">
+                                        <div class="label">SEC</div>
+                                        <div class="value" id="seconds">00</div>
+                                    </div>
+                                </div>
+                                <p class="message">
+                                    은우 <span class="heart">♥</span> 혜지의 결혼식이 <span id="daysLeft">00</span>일 남았습니다.
+                                </p>
+                            </div>
 
                         </div>
                     </div>
                 </div>
 
                 <div class="gallery-wrap">
-                    <div class="gal_title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                        <div class="title">갤러리</div>
+                    <div class="gal_title fade-in">
+                        <div class="m-title fade-in">갤러리</div>
                     </div>
 
-                    <div class="gallery_container fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                        <div>
-                            <div class="gallery-grid-container">
-                                <div class="gallery-grid grid3" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(10, auto)">
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="item" background-image: url(); aspect-ratio: 16 / 20;> </div>
-                                    </div>
-
-                                </div>
+                    <div class="gallery_container fade-in">
+                        <div class="gallery-grid-container">
+                            <div class="gallery-grid grid3" id="gallery">
+                                <!-- JavaScript로 이미지 추가 -->
                             </div>
                         </div>
                     </div>
+                </div>
 
 
+                <!-- 갤러리 모달 -->
+                <div class="modal-overlay" id="galleryModal" style="display: none;">
+                    <div class="modal-content">
+                        <!-- 닫기 버튼 -->
+                        <button class="close-btn" onclick="closeGalleryModal()">✕</button>
+
+                        <!-- 이미지 -->
+                        <img id="gallery-modal-image" src="" alt="갤러리 이미지" />
+
+                        <!-- 내비게이션 -->
+                        <button class="nav-btn prev-btn" onclick="showGalleryPrev()">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </button>
+                        <button class="nav-btn next-btn" onclick="showGalleryNext()">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="map-wrap">
-                    <div class="m-title fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                    <div class="m-title fade-in">
                         <div class="title"> 오시는 길 </div>
 
                         <div>
                             <div class="location-wrap">
-                                <div class="location-hall fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                <div class="location-hall fade-in">
                                     <div> 시네원 웨딩홀 5F 시네원홀 </div>
                                 </div>
-                                <div class="location-address fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                                <div class="location-address fade-in">
                                     <div> 서울 동작구 혜원대로 10길 10 </div>
                                 </div>
                             </div>
 
-                            <div class="map-inner fade-in" style="opacity: 1; transform: translate(0px 0px);">
+                            <div class="map-inner fade-in">
 
                                 <div>
                                     <div id="map" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);"></div>
@@ -520,12 +515,12 @@
                     <div>
                         <div class="notice-wrap">
                             <div class="boxs">
-                                <div class="box fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                                <div class="box fade-in white">
                                     <div>
-                                        <div class="title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                        <div class="title fade-in">
                                             <span class="inner white">포토부스 </span>
                                         </div>
-                                        <div class="text fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                                        <div class="text fade-in">
                                             <div>
                                                 포토부스 이벤트를 준비했습니다.
                                                 <br>
@@ -544,7 +539,7 @@
                 </div>
 
                 <div>
-                    <div class="rsvp-wrap fade-in white" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="rsvp-wrap fade-in white">
                         <div class="card">
                             <div class="title">
                                 <span class="inner white">참석 의사 전달</span>
@@ -570,12 +565,12 @@
 
                 <div>
                     <div class="account-wrap">
-                        <div class="s-subtitle fade-in white" style="opacity: 1; transform: translate(0px, 0px);"></div>
-                        <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="s-subtitle fade-in white"></div>
+                        <div class="m-title fade-in">
                             <span>마음 전하실 곳</span>
                         </div>
                         <!---->
-                        <div class="c-account fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                        <div class="c-account fade-in">
 
                             <div class="account-wrap">
                                 <ul>
@@ -714,84 +709,47 @@
 
                 <div>
                     <div class="guestbook-wrap">
-                        <div class="m-title fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-
-                            <div class="greetings-title">
-                                방명록
-                            </div>
+                        <div class="m-title fade-in">
+                            <div class="greetings-title">방명록</div>
                         </div>
+
                         <div class="c-guestbook gothic">
-                            <div class="comments fade-in" style="opacity: 1; transform: translate(0px, 0px);">
-                                <div class="item white">
-                                    <div class="close"><span class="date">2025.01.30</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                            </svg></span></div>
-                                    <div class="name">상경천 </div>
-                                    <div class="text">결혼을 진심으로 축하드립니다 </div>
-                                </div>
-                                <div class="item white">
-                                    <div class="close"><span class="date">2025.01.15</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                            </svg></span></div>
-                                    <div class="name">박유진</div>
-                                    <div class="text">지우가 벌써 결혼이라니... 벌써 한달 뒤라니! 스무살 20대의 시작을 같이 해줘서 너무 고마운 내 친구. 하나만 말해도 열을 아는 척하면 척인 지우야 항상 응원하고 싸랑한다🥰</div>
-                                </div>
-                                <div class="item white">
-                                    <div class="close"><span class="date">2025.01.09</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                            </svg></span></div>
-                                    <div class="name">정재원</div>
-                                    <div class="text">너무 잘어울리는 태훈이랑 지우님 !!! 평생 행복하기를~~</div>
-                                </div>
-                                <div class="item white">
-                                    <div class="close"><span class="date">2025.01.06</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                            </svg></span></div>
-                                    <div class="name">서상욱</div>
-                                    <div class="text">너무 잘 어울리는 두 분 결혼 축하드립니다~!!<br>예쁜 사랑 하시고 평생 행복하게 사십쇼~~</div>
-                                </div>
-                                <div class="item white">
-                                    <div class="close"><span class="date">2025.01.01</span> <span class="icon"><svg width="15px" height="15px" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z"></path>
-                                            </svg></span></div>
-                                    <div class="name">정인서</div>
-                                    <div class="text">바이</div>
-                                </div>
-                                <!---->
-                            </div>
-                            <div class="tools fade-in" style="opacity: 1; transform: translate(0px, 0px);">
+                            <div class="comments fade-in"></div>
+
+                            <div class="tools fade-in">
                                 <div class="pagination-wrap">
-                                    <div onmousedown="return false" class="pagination">
-                                        <div>
-                                            <!---->
-                                            <div class="pagination-number pagination-active">
-                                                1
-                                            </div>
-                                            <div class="pagination-number">
-                                                2
-                                            </div>
-                                            <div class="pagination-number">
-                                                3
-                                            </div>
-                                            <!---->
-                                        </div>
+                                    <div class="pagination">
+                                        <div class="pagination-number pagination-active">1</div>
+                                        <div class="pagination-number">2</div>
+                                        <div class="pagination-number">3</div>
                                     </div>
                                 </div>
-                                <div class="writing"><button class="m-button dark gothic">
-                                        작성하기
-                                    </button></div>
+                                <div class="writing">
+                                    <button class="m-button dark gothic" id="openVisitModalBtn">작성하기</button>
+                                </div>
                             </div>
-                            <!---->
+                        </div>
 
+                        <!-- 방명록 모달 -->
+                        <div id="visitModal" class="visit-modal hidden">
+                            <div class="visit-modal-content">
+                                <button class="visit-close">&times;</button>
+                                <input id="visitName" placeholder="이름">
+                                <textarea id="visitMessage" placeholder="메시지"></textarea>
+                                <input id="visitPassword" placeholder="비밀번호" type="password">
+                                <button id="submitVisit">등록</button>
+                            </div>
+                        </div>
 
+                        <!-- 방명록 목록 -->
+                        <div class="c-guestbook">
+                            <div class="comments"></div>
                         </div>
                     </div>
                 </div>
 
+
             </div>
-
-
-
         </div>
     </div>
 
@@ -855,6 +813,15 @@
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
+
+        const contactModal = document.getElementById('contactModal');
+
+        contactModal.addEventListener('click', (e) => {
+            const modalContent = document.querySelector('#contactModal .modal-content');
+            if (!modalContent.contains(e.target)) {
+                closeModal();
+            }
+        });
     </script>
 
     <script>
@@ -885,6 +852,206 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
+
+    <script>
+        //갤러리
+        const galleryImages = [
+            './img/photo1.jpg',
+            './img/photo2.jpg',
+            './img/photo3.jpg',
+            './img/photo4.jpg',
+            './img/photo5.jpg',
+            './img/photo6.jpg',
+            './img/photo7.jpg',
+            './img/photo8.jpg',
+            './img/photo9.jpg',
+            './img/photo10.jpg',
+            './img/photo11.jpg',
+            './img/photo12.jpg'
+        ];
+
+        const galleryContainer = document.getElementById('gallery');
+        const galleryModal = document.getElementById('galleryModal');
+        const galleryModalImage = document.getElementById('gallery-modal-image');
+        let galleryCurrentIndex = 0;
+
+        // 갤러리 생성
+        galleryImages.forEach((src, index) => {
+            const item = document.createElement('div');
+            item.className = 'grid-item';
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `사진 ${index + 1}`;
+            img.addEventListener('click', () => openGalleryModal(index));
+            item.appendChild(img);
+            galleryContainer.appendChild(item);
+        });
+
+        // 모달 열기
+        function openGalleryModal(index) {
+            galleryCurrentIndex = index;
+            galleryModalImage.src = galleryImages[galleryCurrentIndex];
+            galleryModal.style.display = 'flex';
+        }
+
+        // 모달 닫기
+        function closeGalleryModal() {
+            galleryModal.style.display = 'none';
+        }
+
+        // 이전 이미지
+        function showGalleryPrev() {
+            if (galleryCurrentIndex > 0) {
+                galleryCurrentIndex--;
+                galleryModalImage.src = galleryImages[galleryCurrentIndex];
+            }
+        }
+
+        // 다음 이미지
+        function showGalleryNext() {
+            if (galleryCurrentIndex < galleryImages.length - 1) {
+                galleryCurrentIndex++;
+                galleryModalImage.src = galleryImages[galleryCurrentIndex];
+            }
+        }
+
+        // ESC 키로 닫기
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && galleryModal.style.display === 'flex') {
+                closeGalleryModal();
+            }
+        });
+
+        // 모달 외부 클릭 시 닫기 (갤러리 모달)
+        galleryModal.addEventListener('click', (e) => {
+            const modalContent = document.querySelector('.modal-content');
+            if (!modalContent.contains(e.target)) {
+                closeGalleryModal();
+            }
+        });
+    </script>
+
+    <script>
+        const visitModal = document.getElementById('visitModal');
+        const openVisitBtn = document.getElementById('openVisitModalBtn');
+        const closeVisitBtn = document.querySelector('.visit-close');
+        const submitVisitBtn = document.getElementById('submitVisit');
+        const container = document.querySelectorAll('.c-guestbook .comments')[0];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = JSON.parse(localStorage.getItem('guestbook') || '[]');
+            saved.forEach(entry => addEntry(entry, false));
+        });
+
+        openVisitBtn.addEventListener('click', () => {
+            visitModal.classList.remove('hidden');
+        });
+
+        closeVisitBtn.addEventListener('click', () => {
+            visitModal.classList.add('hidden');
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !visitModal.classList.contains('hidden')) {
+                visitModal.classList.add('hidden');
+            }
+        });
+
+        visitModal.addEventListener('click', (e) => {
+            const modalContent = document.querySelector('.visit-modal-content');
+            if (!modalContent.contains(e.target)) {
+                visitModal.classList.add('hidden');
+            }
+        });
+
+        submitVisitBtn.addEventListener('click', () => {
+            const name = document.getElementById('visitName').value.trim();
+            const message = document.getElementById('visitMessage').value.trim();
+            const password = document.getElementById('visitPassword').value.trim();
+            const date = new Date().toISOString().split('T')[0];
+
+            if (!name || !message || !password) {
+                alert("모든 필드를 입력하세요.");
+                return;
+            }
+
+            const entry = {
+                name,
+                message,
+                password,
+                date
+            };
+            addEntry(entry, true);
+
+            visitModal.classList.add('hidden');
+            document.getElementById('visitName').value = '';
+            document.getElementById('visitMessage').value = '';
+            document.getElementById('visitPassword').value = '';
+        });
+
+        function addEntry({
+            name,
+            message,
+            password,
+            date
+        }, save = true) {
+            const item = document.createElement('div');
+            item.className = 'item white';
+            item.innerHTML = `
+        <div class="close">
+          <span class="date">${date}</span>
+          <span class="icon delete-icon" style="cursor:pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </span>
+        </div>
+        <div class="name">${name}</div>
+        <div class="text">${message}</div>
+        <input type="hidden" class="entry-password" value="${password}">
+      `;
+            container.prepend(item);
+
+            if (save) {
+                const current = JSON.parse(localStorage.getItem('guestbook') || '[]');
+                current.unshift({
+                    name,
+                    message,
+                    password,
+                    date
+                });
+                localStorage.setItem('guestbook', JSON.stringify(current));
+            }
+        }
+
+        container.addEventListener('click', function(e) {
+            const deleteIcon = e.target.closest('.delete-icon');
+            if (deleteIcon) {
+                const item = deleteIcon.closest('.item');
+                const savedPassword = item.querySelector('.entry-password').value;
+                const input = prompt("비밀번호를 입력하세요:");
+                if (input === savedPassword) {
+                    item.remove();
+                    const date = item.querySelector('.date').textContent;
+                    const name = item.querySelector('.name').textContent;
+                    const text = item.querySelector('.text').textContent;
+                    let saved = JSON.parse(localStorage.getItem('guestbook') || '[]');
+                    saved = saved.filter(e =>
+                        !(e.name === name && e.message === text && e.date === date)
+                    );
+                    localStorage.setItem('guestbook', JSON.stringify(saved));
+                } else {
+                    alert("비밀번호가 틀렸습니다.");
+                }
+            }
+        });
+    </script>
+
+
+
 
     <div id="copy-toast" class="copy-toast">복사되었습니다!</div> <!-- 복사 알림 -->
 
